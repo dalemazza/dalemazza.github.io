@@ -6,3 +6,9 @@ markdown: kramdown
 
 github:
   about: https://dalemazza.github.io/about
+
+
+#footerlinks
+footer-links:
+  github: dalemazza
+  linkedin: dale marriott
