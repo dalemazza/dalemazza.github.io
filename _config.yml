@@ -1,3 +1,5 @@
 theme: jekyll-theme-hacker
 name: Dale Marriott
 description: My journey from scrub to OSCP
+url: "https://dalemazza.github.io/"
+markdown: kramdown
