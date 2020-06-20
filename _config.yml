@@ -3,3 +3,6 @@ name: Dale Marriott
 description: My journey from scrub to OSCP
 #url: "https://dalemazza.github.io/"
 markdown: kramdown
+
+github:
+  about: https://dalemazza.github.io/about
