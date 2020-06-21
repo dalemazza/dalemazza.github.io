@@ -1,5 +1,5 @@
 ---
-layout: homepage1
+layout: homepage
 ---
 
 ## Welcome to my Blog
