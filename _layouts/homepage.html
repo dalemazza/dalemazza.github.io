@@ -12,7 +12,7 @@
   <body>
 
     <header>
-      <div class="container"        
+      <div class="container"
           <a id="a-title" href="https://dalemazza.github.io">
            <h1>{{ " dalemazza.github.io" }}</h1>
  </a>
@@ -22,7 +22,7 @@
             <a href="https://dalemazza.github.io" class="btn">Home</a>
             <a href="https://dalemazza.github.io/about" class="btn">About</a>
             <a href="https://dalemazza.github.io/blog" class="btn">Blog</a>
-        
+
         </section>
       </div>
     </header>
@@ -30,10 +30,11 @@
     <div class="container">
       <section id="main_content">
         {{ content }}
-        {% for post in site.posts %}	
+        {% for post in site.posts %}
+
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p><small><strong>{{ post.date | date: "%B %e %Y" }}</strong> -  {{ post.category }}  <a href="https://dalemazzza.github.io{{ post.url }}#disqus_thread"></a></small></p>			
-{% endfor %}	
+    <p><small><strong>{{ post.date | date: "%B %e %Y" }}</strong> -  {{ post.category }}  <a href="https://dalemazzza.github.io{{ post.url }}#disqus_thread"></a></small></p>
+{% endfor %}
       </section>
     </div>
 
