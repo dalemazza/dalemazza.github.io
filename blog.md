@@ -1,6 +1,6 @@
 ---
 layout: default
-published: true
+
 ---
 
 ## Welcome to my Blog
