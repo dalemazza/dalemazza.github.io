@@ -6,9 +6,10 @@ layout: default
 <h1>{{ page.title }}</h1>
 
 <p class="view">by {{ page.author | default: site.author }}</p>
-
+<p>&nbsp;</p>
 {{content}}
 
 {% if page.tags %}
+<p>&nbsp;</p>
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
 {% endif %}
