@@ -5,6 +5,8 @@ theme: jekyll-theme-hacker
 title: dalemazza github io
 name: Dale Marriott
 description: My journey from scrub to OSCP
+assets: https://raw.githubusercontent.com/dalemazza/dalemazza.github.io/master/assets/
+
+
+#markdown
 markdown: kramdown
-
-
