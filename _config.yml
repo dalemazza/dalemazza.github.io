@@ -7,7 +7,4 @@ name: Dale Marriott
 description: My journey from scrub to OSCP
 markdown: kramdown
 
-#footerlinks
-footer-links:
-  github: dalemazza
-  linkedin: dale-marriott-9a129417a
+
