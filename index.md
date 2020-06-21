@@ -2,15 +2,6 @@
 layout: homepage
 ---
 
-## Welcome to my Blog
+# Welcome to my Blog
 
-
-### Click here to write-ups
-
-## Click here for my blog
-
-
-	
-
-			
-
+## This blog will be a collection of HTB write ups, Cool tools and anything interesting I stumble across on my journey to OSCP.
