@@ -43,4 +43,9 @@
       </script>
     {% endif %}
   </body>
+
+<footer class="footer">
+  {% if site.footer-links.github %}<a href="http://github.com/{{ site.footer-links.github }}">{% include svg-icons/github.html %}</a>{% endif %}
+  {% if site.footer-links.linkedin %}<a href="http://linkedin.com/{{ site.footer-links.linkedin }}">{% include svg-icons/linkedin.html %}</a>{% endif %}
+</footer>
 </html>
