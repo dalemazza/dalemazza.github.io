@@ -24,4 +24,3 @@ This blog will be following my journey from scrub to OSCP!. This blog will conta
 
 
 
-[back](./)
