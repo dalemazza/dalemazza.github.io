@@ -2,5 +2,4 @@
 layout: blog
 ---
 
-## Here are all my Blog posts
-
+## A list of all my Blog posts
