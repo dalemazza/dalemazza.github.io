@@ -32,10 +32,13 @@
     <div class="container">
       <section id="main_content">
         {{ content }}
-        {% for blog in post.category %}
-<p>&nbsp;</p>
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p><small><strong>{{ post.date | date: "%B %e %Y" }}</strong> -  {{ post.category }}  <a href="https://dalemazzza.github.io{{ post.url }}#disqus_thread"></a></small></p>
+        {% for tag in site.tags %}
+  <h3>{{ tag[0] }}</h3>
+  <ul>
+    {% for post in tag[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 {% endfor %}
       </section>
     </div>
