@@ -20,3 +20,12 @@ header {
 #a-title {
   text-decoration: none;
 }
+
+.image {
+ -webkit-transition: all 0.7s ease;
+ transition: all 0.7s ease;
+} 
+.image:hover {
+-webkit-transform:scale(1.3);
+transform:scale(1.3);
+}
