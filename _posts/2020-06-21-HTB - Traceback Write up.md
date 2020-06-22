@@ -22,7 +22,7 @@ This box includes the following techniques:
 
 This box is running a web server hosting a page with a secret php web-shell backdoor,I use this to access the machine and add My pub ssh key to. After connecting to SSH I found a program called Lua, I use this to privesc to sysadmin. Finally I exploit the message of the day to gain root.  
 
-I Start **nmap** scan as per normal.   
+I Start **nmap** scan as per normal.    
 `sudo nmap -sC -sV 10.10.10.181`
 
 <p align="center">
