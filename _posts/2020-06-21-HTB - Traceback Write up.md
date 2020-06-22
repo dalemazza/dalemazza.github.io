@@ -5,7 +5,7 @@ title: HTB - Traceback write up
 date: 2020-06-21
 category: HTB
 tags: HTB
-published: true
+published: false
 ---
 
 <p align="center">
