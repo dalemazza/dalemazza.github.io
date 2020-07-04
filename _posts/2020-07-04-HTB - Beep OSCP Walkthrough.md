@@ -145,7 +145,7 @@ Worth a shot! Let's see if the admin reuses his credentials
 ssh root@10.10.10.7
 ```
 <p align="center">
-  <img class="image" width="auto" height="auto" src="/assets/beep/9.png">
+  <img class="image" width="auto" height="auto" src="/assets/beep/10.png">
 </p>  
 #### Fig 6. SSH error
 
