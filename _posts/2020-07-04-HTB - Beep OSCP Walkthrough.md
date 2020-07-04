@@ -83,8 +83,9 @@ The web server served me this page
 </p>  
 ### Fig 1. Elastix login page  
 This page is from elastix. Elastix is an unified communications server software that brings together IP PBX, email, IM, faxing and collaboration functionality. It has a Web interface and includes capabilities such as a call center. After trying to default credentials I could not get access. Let's see if searchsploit has any exploits.
+
 ***
-## What is searchsploit?
+### What is searchsploit?
 Searhsploit is a database of exploits. You can give it a program with or without the version and it will go out to several places to see if any exploits are found for that software. The results also give you the scripts used to exploit it.
 
 ```
@@ -95,7 +96,7 @@ searchsploit Elastix
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/beep/3.png">
 </p>  
-### Fig 2. Searchsploit results  
+#### Fig 2. Searchsploit results  
 
 Searchsploit has found a few exploits. I struggled to find the version of the the software running so I tried all the exploits. Eventually the **Elastix 2.2.0 - 'graph.php' Local File Inclusion** exploit worked!
 
@@ -104,7 +105,7 @@ Upon looking up the exploit on exploit DB [here](https://www.exploit-db.com/expl
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/beep/lfi.png">
 </p>  
-### Fig 3. LFI location  
+#### Fig 3. LFI location  
 
 Now lets see if the exploits runs.
 
@@ -114,14 +115,14 @@ https://10.10.10.7/vtigercrm/graph.php?current_language=../../../../../../../../
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/beep/4.png">
 </p>  
-### Fig 3. LFI exploits
+#### Fig 3. LFI exploits
 
 It works! The page has a lot of text on the screen so i search for "pass"
 
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/beep/5.png">
 </p>  
-### Fig 3. Admin credentials
+#### Fig 3. Admin credentials
 
 Looks like the we have some admin credentials. One thing I notice is that this page contains the user and passwords for several programs, The same password and username keeps popping up, maybe he use's that for everything?
 
@@ -130,14 +131,14 @@ Let's see what `/etc/passwd` gives us
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/beep/6.png">
 </p>  
-### Fig 4. etc/passwd
+#### Fig 4. etc/passwd
 
 Here we can see that there is a user called 'fanis', we have not got a password for that yet. Let's be cheeky and see if I can read the `root.txt`
 
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/beep/7.png">
 </p>  
-### Fig 4. No access to root.txt
+#### Fig 5. No access to root.txt
 
 Worth a shot! Let's see if the admin reuses his credentials
 ```
@@ -146,7 +147,7 @@ ssh root@10.10.10.7
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/beep/9.png">
 </p>  
-### Fig 4. SSH error
+#### Fig 6. SSH error
 
 That is a weird error. After googling I found that this happens when connecting to old deprecated versions of **SSH**. We have to use a flag to connect to this machine.
 ```
@@ -155,7 +156,7 @@ ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 root@10.10.10.7
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/beep/8.png">
 </p>  
-### Fig 4. SSH error
+#### Fig 7. SSH error
 
 It worked! Looks like we have root aswell! Time to get those flags!
 ```
