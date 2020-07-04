@@ -18,6 +18,7 @@ This box includes the following techniques:
 * searchsploit
 * Local File Inclusion
 
+***
 ### Quick overview  
 
 This box is running a webserver that has elastix installed on. After trying the default credentials I could not get access. I searched for exploits relating to elastix and found a few. After trying many of them one finally worked. This exploit took me straight to Root!
