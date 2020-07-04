@@ -156,7 +156,7 @@ ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 root@10.10.10.7
 <p align="center">
   <img class="image" width="auto" height="auto" src="/assets/beep/8.png">
 </p>  
-#### Fig 7. SSH error
+#### Fig 7. root
 
 It worked! Looks like we have root aswell! Time to get those flags!
 ```
