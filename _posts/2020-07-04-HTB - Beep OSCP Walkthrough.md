@@ -9,7 +9,7 @@ published: true
 ---
 
 <p align="center">
-  <img class="image" width="auto" height="auto" src="/assets/beep/beep.jpg">
+  <img class="image" width="auto" height="auto" src="/assets/beep/beep.png">
 </p>
 Hi guys today I am tackling beep, One of the oldest boxes on HTB. I will be doing this box without metasploit, OSCP style. This box is a Linux box rated easy.  
 
