@@ -8,17 +8,16 @@ tags: THM
 published: true
 ---
 
+<p align="center">
+  <img class="image" width="auto" height="auto" src="https://imgur.com/zKQqAdu.png">
+</p>
 
 
-## Retro
 
 * Platform: **THM**
 * Difficulty: **HARD**
 * Flags: **3**
 
-<p align="center">
-  <img class="image" width="auto" height="auto" src="https://imgur.com/zKQqAdu.png">
-</p>
 
 This is a room on Try Hack Me. It is a full Pwn box meaning you have to go from unauthenticated to system privileges to finish the challenge, gaining 3 flags along the way.
 
