@@ -13,7 +13,6 @@ published: true
 </p>
 
 
-
 * Platform: **THM**
 * Difficulty: **HARD**
 * Flags: **3**
