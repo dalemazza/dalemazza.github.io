@@ -13,12 +13,13 @@ published: true
 </p>
 
 
+
 * Platform: **THM**
 * Difficulty: **HARD**
 * Flags: **3**
 
 
-This is a room on Try Hack Me. It is a full Pwn box meaning you have to go from unauthenticated to system privileges to finish the challenge, gaining 3 flags along the way.
+This is a room on [Try Hack Me](https://tryhackme.com/room/retro). It is a full Pwn box meaning you have to go from unauthenticated to system privileges to finish the challenge, gaining 3 flags along the way.
 
 This challenge includes the following techniques:  
 * nmap
@@ -26,10 +27,8 @@ This challenge includes the following techniques:
 * Reverse-php-shells
 * Windows exploit suggester
 * MSF
+* RDP
 
-## Quick overview
-
-tested
 
 As always I will start with a `nmap` scan, Unless this is different as the challenge states that it does not respond to ping. Due to this we can use the `-Pn` flag with nmap, this skips the host discovery as nmap by default pings the host before it scans.
 ```
