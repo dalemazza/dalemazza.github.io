@@ -209,7 +209,7 @@ Download the `x64` VERSION
 
 Now serve it in a web Server
 
-`sudo python3 http.server 80`
+`sudo python3 -m http.server 80`
 
 Now on the RDP version browse to `10.9.88.138` and download the CVE.exe you just downloaded.
 
