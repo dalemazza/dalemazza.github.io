@@ -103,7 +103,8 @@ That is interesting!
 Also in this directory is a "logs.txt" which looks like it is a set of passwords.
 
 ---
-### Brute force squirrel mail with hydra
+## Brute force squirrel mail with hydra
+---
 
 The `attention.txt` is by a person called "milesdyson" lets try all theses passwords against that username in the mail login. You can use hydra to perform brute logon attempts using the `http-post-form` module which just attempts to login with milesdyson with every password you supply it, Like so.
 
@@ -200,8 +201,8 @@ http://10.10.36.101/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?u
 We now have a low priv www-data shell!
 
 ---
-### Privesc
-
+## Privesc
+---
 One thing to note here is that you cannot `cd` into milesdyson's home dir. However you can cat the flag like so.
 
 ```bash
