@@ -274,9 +274,9 @@ Now catch the shell with netcat and wait for the cronjob to proc
 </p>
 
 **ROOTED!**
-
-### Protect from wildcard exploits
-
+---
+## Protect from wildcard exploits
+---
 To protect from wildcards you can use the follwing to force the wildcard to see the directories instead of thinking it is a command.
 
 ```bash
