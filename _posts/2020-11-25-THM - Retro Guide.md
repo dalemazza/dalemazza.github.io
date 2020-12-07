@@ -6,6 +6,7 @@ date: 2020-11-25
 category: THM
 tags: THM
 published: true
+excerpt_separator: <!--more-->
 ---
 
 <p align="center">
@@ -20,7 +21,7 @@ published: true
 
 
 This is a room on [Try Hack Me](https://tryhackme.com/room/retro). It is a full Pwn box meaning you have to go from unauthenticated to system privileges to finish the challenge, gaining 3 flags along the way.
-
+<!--more-->
 This challenge includes the following techniques:  
 * nmap
 * ffuf
