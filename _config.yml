@@ -1,5 +1,6 @@
 #theme
-theme: jekyll-theme-hacker
+#theme: jekyll-theme-hacker
+remote_theme: jekyll-text-theme
 
 #site details
 title: dalemazza github io
