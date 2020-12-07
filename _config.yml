@@ -1,6 +1,6 @@
 #theme
-#theme: jekyll-theme-hacker
-remote_theme: kitian616/jekyll-TeXt-theme
+theme: jekyll-theme-hacker
+#remote_theme: kitian616/jekyll-TeXt-theme
 
 #site details
 title: dalemazza github io
