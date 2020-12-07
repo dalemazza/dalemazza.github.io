@@ -6,6 +6,7 @@ date: 2020-11-25
 category: THM
 tags: THM
 published: true
+excerpt_separator: <!--more-->
 ---
 <p align="center">
   <img class="image" width="auto" height="auto" src="https://imgur.com/N28z4gw.png">
@@ -14,7 +15,7 @@ published: true
 * Platform: **THM**
 * Difficulty: **EASY**
 * Flags: **5**
-
+<!--more-->
 This is an easy rated room on [Try Hack Me](https://tryhackme.com/room/skynet). This box was simple with a tricky to spot priv esc method.
 
 This challenge includes the following techniques:  
