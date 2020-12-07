@@ -16,6 +16,7 @@ excerpt_separator: <!--more-->
 * Difficulty: **EASY**
 * Flags: **5**
 <!--more-->
+
 This is an easy rated room on [Try Hack Me](https://tryhackme.com/room/skynet). This box was simple with a tricky to spot priv esc method.
 
 This challenge includes the following techniques:  
