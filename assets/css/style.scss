@@ -34,13 +34,17 @@ html {
   overflow-y: scroll;
 }
     .center {
-
   margin: auto;
-
   width: 60%;
-
   border: 5px solid #FFFF00;
+  padding: 10px;
 
+}
+
+  .container {
+  margin: auto;
+  width: 60%;
+  border: 5px solid #FFFF00;
   padding: 10px;
 
 }
