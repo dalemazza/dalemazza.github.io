@@ -44,17 +44,20 @@
     </header>
 
     <div class="container">
-  {% for post in site.categories['HTB'] %}
-    <article class="post">
-      <h3>{{ category[0] }}</h3>
-       <h1>
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <section id="main_content">
+        {{ content }}
+        {% for post in site.categories['HTB'] %}
+         <article class="post">
+         <h3>{{ category[0] }}</h3>
+        <h1>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       </h1>
       <div>
         <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
       </div>
     </article>
   {% endfor %}
+ </section>
 </div>
 
     {% if site.google_analytics %}
