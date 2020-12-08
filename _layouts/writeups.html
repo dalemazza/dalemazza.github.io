@@ -54,8 +54,20 @@
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
           {% endfor %}
     </ul>
-     
-     
+ </section>
+</div>
+
+<div class="container">
+      <section id="main_content">
+        {{ content }}
+        <h3>THM</h3>
+        
+        <ul>
+          {% for post in site.categories['THM'] %}
+          <li>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+    </ul>
  </section>
 </div>
 
