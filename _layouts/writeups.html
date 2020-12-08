@@ -48,9 +48,9 @@
         {{ content }}
         <h3>HTB</h3>
         
-         
+        <ul>
           {% for post in site.categories['HTB'] %}
-        <ul><li>
+          <li>
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
           {% endfor %}
     </ul>
