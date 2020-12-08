@@ -46,16 +46,14 @@
     <div class="posts">
   {% for post in site.categories['HTB'] %}
     <article class="post">
+      <ul>
       <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h3>
-      #<div class="entry">
-      #  {{ post.excerpt }}
-      #</div>
-      <ul>
+      </h3></ul>
+      
         <li><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
           Read More
-      </a></li>
+      </a>
       </ul>
     </article>
   {% endfor %}
