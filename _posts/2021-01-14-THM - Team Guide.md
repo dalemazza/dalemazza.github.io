@@ -246,7 +246,7 @@ SUCCESS!
 
 After looking around for any files I thought interesting I found nothing, the note I found in the `FTP` mentioned they stored `id_rsa` in a config file. Lets do some LFI FUZZING!
 ---
-#### LFI FUZZ
+### LFI FUZZ
 
 For this I used ZAP to FUZZ the LFI with the following wordlist to look for any config files on the system
 
