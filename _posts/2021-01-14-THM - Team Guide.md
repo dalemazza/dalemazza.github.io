@@ -226,23 +226,28 @@ First add the newly found domain to our hosts like so
 ```
 192.168.88.129 team.thm dev.team.thm
 ```
-IMG https://imgur.com/po2POiX.png
-
+<p align="center">
+  <img class="image" width="auto" height="auto" src="https://imgur.com/po2POiX.png">
+</p>
+---
 ### LFI
 
-This site does not cotain much. After clicking the link on the page it takes me to `teamshare.php` page. This URL may be suspectible to LFI as it is using the `?page=teamshare.php` Lets check this
+This site does not contain much. After clicking the link on the page it takes me to `teamshare.php` page. This URL may be susceptible to LFI as it is using the `?page=teamshare.php` Lets check this
 
 First lets try and see a file we know exists
 
 `http://dev.team.thm/script.php?page=/../../../../../../../etc/passwd`
 
-IMG  https://imgur.com/cABxEud.png
+<p align="center">
+  <img class="image" width="auto" height="auto" src="https://imgur.com/cABxEud.png">
+</p>
+
 
 SUCCESS!
 
-After looking around for any files I thought intersting I found nothing, the note I found in the `FTP` mentioned they stored `id_rsa` in a config file. Lets Fdo some LFI FUZZING
-
-### LFI FUZZ
+After looking around for any files I thought interesting I found nothing, the note I found in the `FTP` mentioned they stored `id_rsa` in a config file. Lets do some LFI FUZZING!
+---
+## LFI FUZZ
 
 For this I used ZAP to FUZZ the LFI with the following wordlist to look for any config files on the system
 
