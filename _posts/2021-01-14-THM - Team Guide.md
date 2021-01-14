@@ -98,7 +98,7 @@ Success! we have a site now.
 After some basic enumeration of the site I found nothing in the comments or anything on the site I saw as an attack vector.
 
 ---
-### ffuf - Directory fuzzing
+## ffuf - Directory fuzzing
 
 Now I use `ffuf` which is a fuzzing script, this finds directorys on the website.
 
@@ -230,7 +230,7 @@ First add the newly found domain to our hosts like so \n
   <img class="image" width="auto" height="auto" src="https://imgur.com/po2POiX.png">
 </p>
 ---
-### LFI
+## LFI
 
 This site does not contain much. After clicking the link on the page it takes me to `teamshare.php` page. This URL may be susceptible to LFI as it is using the `?page=teamshare.php` Lets check this
 
@@ -248,7 +248,7 @@ SUCCESS!
 After looking around for any files I thought interesting I found nothing, the note I found in the `FTP` mentioned they stored `id_rsa` in a config file. Lets do some LFI FUZZING!
 
 ---
-### LFI FUZZ
+## LFI FUZZ
 
 For this I used ZAP to FUZZ the LFI with the following wordlist to look for any config files on the system
 
@@ -278,7 +278,7 @@ After looking through them I found the following file `/etc/ssh/sshd_config` con
 
 Take this and save it. Remember to remove all the `#` and chmod 600 it.
 ---
-### SSH access
+## SSH access
 
 Now login to SSH
 
@@ -291,7 +291,7 @@ Grab the `user.txt` flag
 `cat user.txt`
 
 ---
-### Priv esc 1
+## Priv esc 1
 
 Doing `sudo -l` shows the following
 ```bash
@@ -336,7 +336,7 @@ uid=1001(gyles) gid=1003(editors) groups=1003(editors)
 ```
 No we have a shell as gyles! Although this shell is quite basic.
 
-### Root Priv Esc
+## Root Priv Esc
 
 This shell is quite resrictive due to it being launched from the script.
 
