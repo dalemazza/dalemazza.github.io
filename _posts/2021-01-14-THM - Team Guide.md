@@ -220,7 +220,7 @@ Gyles
 
 Somebody has left a note, It mentions that a new site is being developed and is available at `.dev`, Also It mentions that team policy is that they have to back up their id_rsa keys to a config file?
 
-First add the newly found domain to our hosts like so \n
+First add the newly found domain to our hosts like so<p>&nbsp;</p>
 `sudo nano /etc/hosts`
 
 ```
