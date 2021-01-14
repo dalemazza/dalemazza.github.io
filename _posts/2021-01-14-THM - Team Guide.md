@@ -275,8 +275,8 @@ Under the `fuzzer` tab you can find all the requests it tried. If you filter the
 
 
 After looking through them I found the following file `/etc/ssh/sshd_config` contained an `id_rsa` for the account `dale`
-
 Take this and save it. Remember to remove all the # and chmod 600 it.
+
 ---
 ## SSH access
 
@@ -341,7 +341,7 @@ No we have a shell as gyles! Although this shell is quite basic.
 
 This shell is quite resrictive due to it being launched from the script.
 
-After enumeration I found `sudo -l`1 reveal the following
+After enumeration I found `sudo -l` reveal the following
 ```bash
 sudo -l
 Matching Defaults entries for gyles on TEAM:
