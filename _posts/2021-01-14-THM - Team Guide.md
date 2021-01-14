@@ -245,6 +245,7 @@ First lets try and see a file we know exists
 SUCCESS!
 
 After looking around for any files I thought interesting I found nothing, the note I found in the `FTP` mentioned they stored `id_rsa` in a config file. Lets do some LFI FUZZING!
+
 ---
 ### LFI FUZZ
 
@@ -253,13 +254,13 @@ For this I used ZAP to FUZZ the LFI with the following wordlist to look for any 
 Wordlist- `https://github.com/danielmiessler/SecLists/blob/master/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt`
 
 
-- Run a Manual Explore on the following address `http://dev.team.thm/script.php?page=/../../../../../../../etc/passwd`
-- Right click the history line with the correct URL on and go to Attack then Fuzz
-- Highlight the following `/etc/passwd` and select add then add again
-- From the drop down bar select file then browse to the LFI woprdlist `/usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt` Then add again
-- Click ok then start fuzzer
+* Run a Manual Explore on the following address `http://dev.team.thm/script.php?page=/../../../../../../../etc/passwd`
+* Right click the history line with the correct URL on and go to Attack then Fuzz
+* Highlight the following `/etc/passwd` and select add then add again
+* From the drop down bar select file then browse to the LFI woprdlist `/usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt` Then add again
+* Click ok then start fuzzer
 
-If you are unsure what this is doing, basically for every line in the wordlist eg `/etc/shadow` it will append this where you have placed the mask ie `/etc/passwd`
+If you are unsure what this is doing, basically for every line in the wordlist e.g `/etc/shadow` it will append this where you have placed the mask i.e `/etc/passwd`
 
 So `http://dev.team.thm/script.php?page=/../../../../../../../etc/passwd` will become this `http://dev.team.thm/script.php?page=/../../../../../../../etc/shadow`
 
@@ -267,12 +268,15 @@ This is a very fast way of finding files via an LFI.
 
 Under the `fuzzer`tab you can find all the requests it tried. If you filter the body via size you can see all the files that was found as they have a size greater then 0 like so
 
-IMG https://imgur.com/njKdaoo.png
+<p align="center">
+  <img class="image" width="auto" height="auto" src="https://imgur.com/njKdaoo.png">
+</p>
 
-After looking through them I found a the following file `/etc/ssh/sshd_config` contained an `id_rsa` for the account `dale`
+
+After looking through them I found the following file `/etc/ssh/sshd_config` contained an `id_rsa` for the account `dale`
 
 Take this and save it. Remember to remove all the `#` and chmod 600 it.
-
+---
 ### SSH access
 
 Now login to SSH
@@ -285,9 +289,10 @@ Grab the `user.txt` flag
 
 `cat user.txt`
 
-Doing `sudo -l` shows the following
-
+---
 ### Priv esc 1
+
+Doing `sudo -l` shows the following
 ```
 Matching Defaults entries for dale on TEAM:
     env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
