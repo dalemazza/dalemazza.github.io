@@ -6,6 +6,7 @@ date: 2021-01-14
 category: THM
 tags: THM
 published: true
+excerpt_separator: <!--more-->
 ---
 
 <p align="center">
@@ -19,7 +20,7 @@ published: true
 * Flags: **2**
 
 This is a box I personally made, this is my first time making content and hope you all enjoy it!!
-
+<!--more-->
 This is a room on [Try Hack Me](). It is a full Pwn box meaning you have to go from unauthenticated to system privileges to finish the challenge, gaining 2 flags along the way.
 
 This challenge includes the following techniques:  
