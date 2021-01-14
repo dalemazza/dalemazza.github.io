@@ -96,6 +96,7 @@ Success! we have a site now.
 
 
 After some basic enumeration of the site I found nothing in the comments or anything on the site I saw as an attack vector.
+
 ---
 ### ffuf - Directory fuzzing
 
@@ -293,7 +294,7 @@ Grab the `user.txt` flag
 ### Priv esc 1
 
 Doing `sudo -l` shows the following
-```
+```bash
 Matching Defaults entries for dale on TEAM:
     env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
 
@@ -302,7 +303,7 @@ User dale may run the following commands on TEAM:
 ```
 Lets see what this script does
 
-```
+```bash
 #!/bin/bash
 
 printf "Reading stats.\n"
@@ -320,12 +321,11 @@ cp /var/stats/stats.txt /var/stats/stats-$date_save.bak
 
 printf "Stats have been backed up\n"
 ```
-Due to this script taking user input and assigning this to the value of `$error` and then sending this straight to the shell. THIS IS A NO NO!
+This script is taking user input and assigning this to the value of `$error` and then sending this straight to the shell. THIS IS A NO NO!
 
+Where the script asks for `date` if you supply it with `/bin/bash` This will spawn a bash shell. Due to the fact that we have ran this as the `gyles` this bash shell will belong to him
 
-Where the script asks for `date` if you supply it with `/bin/bash` This will spawn a bash shell. Due to the fact with run this as the gyles user this bash shell will belong to `gyles`
-
-```
+```bash
 dale@TEAM:~$ sudo -u gyles /home/gyles/admin_checks
 Reading stats.
 Reading stats..
