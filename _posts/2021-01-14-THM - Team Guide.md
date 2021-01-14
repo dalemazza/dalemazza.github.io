@@ -177,7 +177,6 @@ cd $source_folder
 !cd $dest_folder
 mget -R *
 quit
-
 ```
 
 Now we have some creds! This script is using the `FTP` service. Lets enumerate it!
@@ -220,7 +219,7 @@ Gyles
 
 Somebody has left a note, It mentions that a new site is being developed and is available at `.dev`, Also It mentions that team policy is that they have to back up their id_rsa keys to a config file?
 
-First add the newly found domain to our hosts like so
+First add the newly found domain to our hosts like so \n
 `sudo nano /etc/hosts`
 
 ```
@@ -247,7 +246,7 @@ SUCCESS!
 
 After looking around for any files I thought interesting I found nothing, the note I found in the `FTP` mentioned they stored `id_rsa` in a config file. Lets do some LFI FUZZING!
 ---
-## LFI FUZZ
+#### LFI FUZZ
 
 For this I used ZAP to FUZZ the LFI with the following wordlist to look for any config files on the system
 
