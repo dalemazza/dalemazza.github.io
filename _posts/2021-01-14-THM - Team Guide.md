@@ -255,10 +255,10 @@ For this I used ZAP to FUZZ the LFI with the following wordlist to look for any 
 Wordlist- `https://github.com/danielmiessler/SecLists/blob/master/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt`
 
 
-* Run a Manual Explore on the following address `http://dev.team.thm/script.php?page=/../../../../../../../etc/passwd`
+* Run a Manual Explore on the following address http://dev.team.thm/script.php?page=/../../../../../../../etc/passwd
 * Right click the history line with the correct URL on and go to Attack then Fuzz
-* Highlight the following `/etc/passwd` and select add then add again
-* From the drop down bar select file then browse to the LFI woprdlist `/usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt` Then add again
+* Highlight the following /etc/passwd and select add then add again
+* From the drop down bar select file then browse to the LFI woprdlist /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt Then add again
 * Click ok then start fuzzer
 
 If you are unsure what this is doing, basically for every line in the wordlist e.g `/etc/shadow` it will append this where you have placed the mask i.e `/etc/passwd`
@@ -267,7 +267,7 @@ So `http://dev.team.thm/script.php?page=/../../../../../../../etc/passwd` will b
 
 This is a very fast way of finding files via an LFI.
 
-Under the `fuzzer`tab you can find all the requests it tried. If you filter the body via size you can see all the files that was found as they have a size greater then 0 like so
+Under the `fuzzer` tab you can find all the requests it tried. If you filter the body via size you can see all the files that was found as they have a size greater then 0 like so
 
 <p align="center">
   <img class="image" width="auto" height="auto" src="https://imgur.com/njKdaoo.png">
@@ -276,7 +276,7 @@ Under the `fuzzer`tab you can find all the requests it tried. If you filter the 
 
 After looking through them I found the following file `/etc/ssh/sshd_config` contained an `id_rsa` for the account `dale`
 
-Take this and save it. Remember to remove all the `#` and chmod 600 it.
+Take this and save it. Remember to remove all the # and chmod 600 it.
 ---
 ## SSH access
 
