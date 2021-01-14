@@ -275,7 +275,7 @@ Under the `fuzzer` tab you can find all the requests it tried. If you filter the
 
 
 After looking through them I found the following file `/etc/ssh/sshd_config` contained an `id_rsa` for the account `dale`
-Take this and save it. Remember to remove all the # and chmod 600 it.
+Take this and save it. Remember to remove all the `#` and chmod 600 it.
 
 ---
 ## SSH access
