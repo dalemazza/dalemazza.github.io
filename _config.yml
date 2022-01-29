@@ -13,22 +13,25 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-lang: en-US
-title: My Awesome Site
+
+remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5" 
+
+lang: en-UK
+title: dalemazza's blog
 email:
-description:
-baseurl: # the optional subpath of your site, e.g. "/blog"
+description:Im a scrub
+baseurl: "/"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 author:
-  name:
+  name:dalemazza
   twitter:
   picture:
 twitter_username:
 github_username:
-logo: # path of site logo, e.g. "/assets/images/logo.png"
-search: # true, false (default)
+logo: /assets/icons/basically-basic-logo-light.svg
+search: true
 search_full_content: false # true, false (default)
-search_provider: # lunr (default), algolia
+search_provider: lunr
 algolia:
   application_id: # YOUR_APPLICATION_ID
   index_name: # YOUR_INDEX_NAME
@@ -37,7 +40,31 @@ algolia:
 
 # Build settings
 markdown: kramdown
-remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5" 
+highlighter: rouge
+lsi: false
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Outputting
+permalink: /:categories/:title/
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
 plugins: # previsously gems
   - jekyll-feed
   - jekyll-seo-tag
