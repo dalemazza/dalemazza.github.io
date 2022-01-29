@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5" 
+remote_theme: "mmistakes/jekyll-theme-basically-basic"
 
 lang: en-UK
 title: dalemazza's blog
@@ -65,11 +65,13 @@ permalink: /:categories/:title/
 timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-plugins: # previsously gems
+plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-remote-theme
+
 feed:
   path: atom.xml
 
