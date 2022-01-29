@@ -19,7 +19,7 @@ remote_theme: "mmistakes/jekyll-theme-basically-basic"
 lang: en-UK
 title: dalemazza's blog
 email:
-description:Im a scrub
+description: Im a scrub
 baseurl: "/"
 url: "https://dalemazza.github.io"
 author:
