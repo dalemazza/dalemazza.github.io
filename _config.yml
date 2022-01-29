@@ -21,7 +21,7 @@ title: dalemazza's blog
 email:
 description:Im a scrub
 baseurl: "/"
-url: https://dalemazza.github.io
+url: "https://dalemazza.github.io"
 author:
   name:dalemazza
   twitter:
@@ -30,7 +30,7 @@ twitter_username:
 github_username:
 logo: /assets/icons/basically-basic-logo-light.svg
 search: true
-search_full_content: false # true, false (default)
+search_full_content: true
 search_provider: lunr
 algolia:
   application_id: # YOUR_APPLICATION_ID
