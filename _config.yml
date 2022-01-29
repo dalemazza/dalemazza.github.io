@@ -18,16 +18,16 @@ remote_theme: "mmistakes/jekyll-theme-basically-basic"
 
 lang: en-UK
 title: dalemazza's blog
-email:
-description: Im a scrub
+email: dalemarriott@live.co.uk
+description: 
 baseurl: "/"
 url: "https://dalemazza.github.io"
 author:
   name: dalemazza
   twitter:
-  picture:
+  picture: /assets/images/avatar.png
 twitter_username:
-github_username:
+github_username: "https://github.com/dalemazza/"
 logo: /assets/icons/basically-basic-logo-dark.svg
 search: true
 search_full_content: true
