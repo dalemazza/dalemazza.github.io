@@ -28,7 +28,7 @@ author:
   picture:
 twitter_username:
 github_username:
-logo: /assets/icons/basically-basic-logo-light.svg
+logo: /assets/icons/basically-basic-logo-dark.svg
 search: true
 search_full_content: true
 search_provider: lunr
