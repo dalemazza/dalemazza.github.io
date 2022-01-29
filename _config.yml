@@ -21,7 +21,7 @@ title: dalemazza's blog
 email:
 description:Im a scrub
 baseurl: "/"
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: https://dalemazza.github.io
 author:
   name:dalemazza
   twitter:
