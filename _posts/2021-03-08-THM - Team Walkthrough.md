@@ -8,11 +8,7 @@ tags: THM
 excerpt_separator: <!--more-->
 ---
 
-
-<p align="center">
-  <img class="image" width="auto" height="auto" src="https://imgur.com/9vuyWVz.png">
-</p>
-
+<img src="https://imgur.com/9vuyWVz.png" class="align-center" alt="" width="auto" height="auto">
 
 
 * Platform: **THM**
