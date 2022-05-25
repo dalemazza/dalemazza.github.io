@@ -22,7 +22,7 @@ excerpt_separator: <!--more-->
 
 This is a box I personally made, this is my first time making content and hope you all enjoy it!!
 <!--more-->
-This is a room on [Try Hack Me](). It is a full Pwn box meaning you have to go from unauthenticated to system privileges to finish the challenge, gaining 2 flags along the way.
+This room is on [Try Hack Me](). It is a full Pwn box meaning you have to go from unauthenticated to system privileges to finish the challenge, gaining 2 flags along the way.
 
 This challenge includes the following techniques:  
 * nmap
