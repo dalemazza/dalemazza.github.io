@@ -3,8 +3,8 @@ layout: post
 author: dalemazza
 title: CRTP Review
 date: 2022-07-02
-category: blog
-tags: blog
+category: Blog
+tags: Blog
 excerpt_separator: <!--more-->
 ---
 
