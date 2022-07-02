@@ -1,16 +1,15 @@
 ---
-layout: post
-author: dalemazza 
-title: CRTP Review 
-date: 2022-06-27 
-category: Blog
-tags: Blog
+layout: post
+author: dalemazza
+title: CRTP Review
+date: 2022-07-02
+category: blog
+tags: blog
 excerpt_separator: <!--more-->
 ---
-  
- <p align="center"> 
-   <img class="image" width="auto" height="auto" src="/assets/tb/1-1.png"> 
- </p> 
+
+
+<img src="/assets/crtp.jpg" class="align-center" alt="" width="auto" height="auto">
 
 A couple of weeks back I started the Pentester academy Certified Red Team Professional course. The course ended up being the best course I have taken to date, teaching all manor of active directory attacks. The premise of the course is that it is taught on a fully patched network with AV turned on along with real time protection. The course focuses on AD misconfigs and how to abuse them.
 <!--more-->
