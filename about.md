@@ -15,5 +15,5 @@ This blog will be following my journey from scrub to OSCP!. This blog will conta
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:list -->
-<ul><li>Complete Udemy Practical Ethical Hacking course - COMPLETE</li><li>Gain rank of Pro Hacker on HTB - COMPLETE</li><li>Learn Python - Beginner - Intermediate - Advanced</li><li>Try Vulnhub</li><li>eJPT - COMPLETE</li><li>CompTIA N+</li><li>OSCP</li></ul>
+<ul><li>Complete Udemy Practical Ethical Hacking course - COMPLETE</li><li>Gain rank of Pro Hacker on HTB - COMPLETE</li><li>Learn Python - Beginner - Intermediate - Advanced</li><li>Try Vulnhub</li><li>eJPT - COMPLETE</li><li>CRTP - COMPLETE</li><li>CompTIA N+</li><li>OSCP</li></ul>
 <!-- /wp:list -->
