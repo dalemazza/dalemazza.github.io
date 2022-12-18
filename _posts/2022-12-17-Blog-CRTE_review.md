@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 ---
 
 
-<img src="/assets/CRTE1.jpg" class="align-center" alt="" width="auto" height="auto">
+<img src="/assets/CRTE1.png" class="align-center" alt="" width="auto" height="auto">
 
 Recently I passed the Certified Red Team Expert certification by Pentester Academy. This was a really good course that pushes you to the limit of attacking Active Directory within a realistic fully patched and AV on environment. This course throws you in the deep end with no lab manual and requires you to conduct research on your findings. Here are my thoughts on the course and exam along with some tips. 
 <!--more-->
