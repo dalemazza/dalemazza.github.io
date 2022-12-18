@@ -2,7 +2,7 @@
 layout: post
 author: dalemazza
 title: CRTE Review
-date: 2022-17-12
+date: 2022-12-17
 category: Blog
 tags: Blog
 excerpt_separator: <!--more-->
@@ -23,7 +23,7 @@ The course covers many techniques some being:
 * Double / Triple Hop within PSremote
 * Advanced MSSQL attacks
 * ACL abuse
-* Firewall attacks
+* Firewall attacks 
 
 ### Course Content
 
